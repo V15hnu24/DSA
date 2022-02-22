@@ -1,26 +1,27 @@
 public class MaximumProductSubarrayLC152 {
     public static void main(String[] args) {
-        
+
     }
     //leetcode
     public int maxProduct(int[] nums) {
         int pm = nums[0];
         int nm = nums[0];
-        int max = Integer.MIN_VALUE;
-        for(int i = 0;i<nums.length;i++){
-            if(nums[i]>max){
-                max=nums[i];
-            }
-        }
+        int max = nums[0];
+        // for(int i = 0;i<nums.length;i++){
+        //     if(nums[i]>max){
+        //         max=nums[i];
+        //     }
+        // }
+
         for(int i=1;i<nums.length;i++){
-            if(nums[i]==0){
-                pm=1;
-                nm=1;
-                continue;
-            }
-            int temp = pm*nums[i];
-            pm = Math.max(nums[i],Math.max(temp,nm*nums[i]));
-            nm = Math.min(nums[i],Math.max(temp,nm*nums[i]));
+            // if(nums[i]==0){
+            //     pm=1;
+            //     nm=1;
+            //     continue;
+            // }
+            int temp = pm;
+            pm = Math.max(nums[i],Math.max(pm*nums[i],nm*nums[i]));
+            nm = Math.min(nums[i],Math.min(temp*nums[i],nm*nums[i]));
             max = Math.max(pm,max);
         }
         return max;
