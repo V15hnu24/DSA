@@ -45,8 +45,6 @@ class Solution
         PriorityQueue<Job> heap = new PriorityQueue<>(
                 (a,b) -> {return b.profit - a.profit;});
 
-        int slots = arr[arr.length-1].deadline;
-
         for (int i = n-1; i > -1 ; i--) {
             int slots;
 
