@@ -3,7 +3,7 @@ import java.util.*;
 class Solution
 {
 
-    //leetcode 1235
+    //leetcode 1235 O(N)
     public int jobScheduling(int[] startTime, int[] endTime, int[] profit) {
 
         int n = startTime.length;
@@ -30,7 +30,8 @@ class Solution
         return dp.lastEntry().getValue();
     }
 
-    //Function to find the maximum profit and the number of jobs done. NlonN
+    //Function to find the maximum profit and the number of jobs done. NlonN gfg
+// https://practice.geeksforgeeks.org/problems/job-sequencing-problem-1587115620/1/#
 
     int[] JobScheduling(Job arr[], int n)
     {
@@ -73,7 +74,7 @@ class Solution
     }
 
 
-    //N2 solution
+    //N2 solution gfg
     int[] job_sequencing(Job arr[], int n){
         Arrays.sort(arr, (a,b) -> b.profit - a.profit);
         boolean[] res = new boolean[n];
