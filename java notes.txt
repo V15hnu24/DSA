@@ -1,3 +1,11 @@
 TreeMap<Integer,Integer> it is a map where keys in it are stored in sorted manner and it uses binary search to find any key. Therefore it takes Log(N) time to find the key.
 I Used in
 Job sequencing problem 
+
+
+Interface 
+
+Interface is a blueprint of a class with absract methods in it. Absract methods are methods which are not implemented. THe class which implements the interface defines the abstarct methods in an Interface.
+
+Example Queue is an interface while using Queue we will use it as 
+Queue<Integer> queue = new Linkedlist<>(); Here we use LinkedList<>() because LinkedList implements the Deque since Deque extends Queue, Methods in Queue are also implemented in it.
