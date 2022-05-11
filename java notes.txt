@@ -9,3 +9,32 @@ Interface is a blueprint of a class with absract methods in it. Absract methods 
 
 Example Queue is an interface while using Queue we will use it as 
 Queue<Integer> queue = new Linkedlist<>(); Here we use LinkedList<>() because LinkedList implements the Deque since Deque extends Queue, Methods in Queue are also implemented in it.
+
+Wrapper class it helps convert datatype to object. Integer and int n other words, we can wrap a primitive value into a wrapper class object.
+Anonymous class helps to override or implement the methods of a class.
+
+interface Polygon {
+   public void display();
+}
+
+class AnonymousDemo {
+   public void createClass() {
+
+      // anonymous class implementing interface
+      Polygon p1 = new Polygon() {
+         public void display() {
+            System.out.println("Inside an anonymous class.");
+         }
+      };
+      p1.display();
+   }
+}
+
+class Main {
+   public static void main(String[] args) {
+      AnonymousDemo an = new AnonymousDemo();
+      an.createClass();
+   }
+}
+Ouput: Inside an anonymous class.
+
