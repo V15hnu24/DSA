@@ -12,7 +12,6 @@ public class LC215KthLargestelement {
         for(int i=0; i<k-1; i++){
             delete(nums,nums.length-i);
         }
-
         return nums[0];
     }
 
