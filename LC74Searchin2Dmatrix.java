@@ -1,6 +1,6 @@
 public class LC74Searchin2Dmatrix {
     public static void main(String[] args) {
-        
+
     }
     public boolean searchMatrix(int[][] matrix, int target) {
 

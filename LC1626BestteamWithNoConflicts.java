@@ -12,6 +12,8 @@ public class LC1626BestteamWithNoConflicts {
             return a.age - b.age;
         });
 
+        return 0;
+
     }
 
     class player{
