@@ -1,7 +1,6 @@
 public class LC1432MaxdifferncebyInterchanging {
     public static void main(String[] args) {
-
-
+        System.out.println(Math.log(10));
     }
 
     public static int maxDiff(int num) {
