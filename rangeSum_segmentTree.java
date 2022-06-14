@@ -1,9 +1,71 @@
+import java.util.ArrayList;
+
 public class rangeSum_segmentTree {
     public static void main(String[] args) {
-
+        ArrayList<Integer> temp = new ArrayList<>();
+        temp.add(1,5);
+        System.out.println(temp.get(1));
     }
 
 
+    private int[] nums;
+    private int[] seg;
+    int n;
+    public NumArray(int[] nums) {
+        this.nums = nums;
+        this.n = nums.length;
+        seg = new int[4*n];
+        build(0,n-1, 0);
+    }
+    int build(int left, int right, int node){
+        int mid=0;
+        int leftsum = 0, rightsum =0;
+        if(left==right){
+            return seg[node] = nums[left];
+        }
+
+        mid = left + ((right - left)/2);
+        leftsum = build(left, mid, 2*node +1);
+        rightsum = build(mid+1,right, 2*node +2);
+        return seg[node] = leftsum + rightsum;
+    }
+
+    public void update(int index, int val) {
+        update(index,val, 0, nums.length -1, 0);
+    }
+
+    public int sumRange(int left, int right) {
+        return sumRange(left, right, 0, nums.length -1,0);
+    }
+
+    int sumRange(int l, int r, int ss, int se, int node){
+        if(r<ss || l > se ){
+            return 0;
+        }
+        if(l<=ss && se<=r){
+            return seg[node];
+        }
+        int mid = (ss + se)/2;
+        int leftsum = sumRange(l,r, ss, mid,2*node + 1);
+        int rightsum = sumRange(l,r, mid +1, se,2*node + 2);
+        return leftsum + rightsum;
+
+    }
+
+    int update(int i, int val, int ss, int se, int node){
+        if(i<ss || i>se){
+            return seg[node];
+        }
+
+        if(ss == se){
+            return seg[node] = val;
+        }
+        int mid = (ss + se)/2;
+        int leftsum = update(i, val, ss, mid,2*node + 1);
+        int rightsum = update(i,val, mid +1, se,2*node + 2);
+        return seg[node] = leftsum + rightsum;
+
+    }
 }
 
 class segmentTreeNode{
