@@ -1,6 +1,6 @@
 import java.util.ArrayList;
 
-public class rangeSum_segmentTree {
+public class LC307_rangeSum_segmentTree {
     public static void main(String[] args) {
         ArrayList<Integer> temp = new ArrayList<>();
         temp.add(1,5);
@@ -11,12 +11,14 @@ public class rangeSum_segmentTree {
     private int[] nums;
     private int[] seg;
     int n;
+    /*
     public NumArray(int[] nums) {
         this.nums = nums;
         this.n = nums.length;
         seg = new int[4*n];
         build(0,n-1, 0);
     }
+     */
     int build(int left, int right, int node){
         int mid=0;
         int leftsum = 0, rightsum =0;
