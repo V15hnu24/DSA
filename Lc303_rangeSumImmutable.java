@@ -1,17 +1,18 @@
-public class Lc304_rangeSumImmutable {
+public class Lc303_rangeSumImmutable {
     public static void main(String[] args) {
 
     }
     int[] nums;
     int[] seg;
     int n;
-
+/*
     public NumArray(int[] nums) {
         this.nums = nums;
         this.n = nums.length;
         this.seg = new int[4*n];
         build(0, n-1, 0);
     }
+    */
 
     int build(int l, int r, int node){
         if(l==r){
