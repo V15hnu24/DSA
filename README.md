@@ -2,7 +2,7 @@
 This file reposistory is my solutions to the DSA questions in my journey.
 
 
-Leetcode links of my code
+Leetcode links of my code in leetcode Discussions.
 
 https://leetcode.com/problems/reverse-linked-list-ii/discuss/2278406/Java-or-Single-pass
 
