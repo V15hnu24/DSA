@@ -4,6 +4,8 @@ This file reposistory is my solutions to the DSA questions in my journey.
 
 Leetcode links of my code in leetcode Discussions.
 
+https://leetcode.com/problems/unique-paths/discuss/2514802/Well-commented-DP-solution
+
 https://leetcode.com/problems/car-fleet/discuss/2269460/Java-Best-Explanation-or-Stack
 
 https://leetcode.com/problems/reverse-linked-list-ii/discuss/2278406/Java-or-Single-pass
